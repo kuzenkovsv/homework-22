@@ -1,0 +1,68 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model WebApp.Models.ContactDetailsViewModel
+
+@{
+    ViewData["Title"] = "Данные контакта " + Model.Item.ContactID;
+}
+<h2>Данные контакта @Model.Item.ContactID</h2>
+
+
+    <table class="EvenString" border="1" cellspacing="0" cellpadding="5" width="30%">
+
+        <tr>
+            <th>ID</th>
+            <td>@Model.Item.ContactID</td>
+        </tr>
+        <tr>
+            <th>Фамилия</th>
+            <td>@Model.Item.Surname</td>
+        </tr>
+        <tr>
+            <th>Имя</th>
+            <td>@Model.Item.Name</td>
+        </tr>
+        <tr>
+            <th>Отчество</th>
+            <td>@Model.Item.MiddleName</td>
+        </tr>
+        <tr>
+            <th>Телефон</th>
+            <td>@Model.Item.PhoneNumber</td>
+        </tr>
+        <tr>
+            <th>Адрес</th>
+            <td>@Model.Item.Address</td>
+        </tr>
+        <tr>
+            <th>Описание</th>
+            <td>@Model.Item.Description</td>
+        </tr>
+
+    </table>
+@if (SignInManager.IsSignedIn(User))
+{
+    <p>
+        <a asp-controller="Home"
+       asp-action="EditingContact"
+       asp-route-id="@Model.Item.ContactID">
+            <input class="button" type="button" value="Редактировать" />
+        </a>
+    </p>
+
+    <a asp-controller="Home"
+   asp-action="SomePhoneBook"
+   asp-route-id="@Model.Item.PhoneBookID">
+        <input class="button" type="button" value="Назад в контакты" />
+    </a>
+}
+else
+{
+    <a asp-controller="Home"
+   asp-action="SomePhoneBook"
+   asp-route-id="@Model.Item.PhoneBookID">
+        <input class="button" type="button" value="Назад в контакты" />
+    </a>
+}
+

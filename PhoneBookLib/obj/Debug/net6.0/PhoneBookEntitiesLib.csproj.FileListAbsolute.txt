@@ -1,0 +1,36 @@
+D:\Библиотека\skillbox\Обучение\1. C#\21. ASP.NET Core. Часть 2\homework-theme-21\PhoneBookLib\bin\Debug\net6.0\PhoneBookEntitiesLib.deps.json
+D:\Библиотека\skillbox\Обучение\1. C#\21. ASP.NET Core. Часть 2\homework-theme-21\PhoneBookLib\bin\Debug\net6.0\PhoneBookEntitiesLib.dll
+D:\Библиотека\skillbox\Обучение\1. C#\21. ASP.NET Core. Часть 2\homework-theme-21\PhoneBookLib\bin\Debug\net6.0\PhoneBookEntitiesLib.pdb
+D:\Библиотека\skillbox\Обучение\1. C#\21. ASP.NET Core. Часть 2\homework-theme-21\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.csproj.AssemblyReference.cache
+D:\Библиотека\skillbox\Обучение\1. C#\21. ASP.NET Core. Часть 2\homework-theme-21\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\Библиотека\skillbox\Обучение\1. C#\21. ASP.NET Core. Часть 2\homework-theme-21\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.AssemblyInfoInputs.cache
+D:\Библиотека\skillbox\Обучение\1. C#\21. ASP.NET Core. Часть 2\homework-theme-21\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.AssemblyInfo.cs
+D:\Библиотека\skillbox\Обучение\1. C#\21. ASP.NET Core. Часть 2\homework-theme-21\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.csproj.CoreCompileInputs.cache
+D:\Библиотека\skillbox\Обучение\1. C#\21. ASP.NET Core. Часть 2\homework-theme-21\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.dll
+D:\Библиотека\skillbox\Обучение\1. C#\21. ASP.NET Core. Часть 2\homework-theme-21\PhoneBookLib\obj\Debug\net6.0\refint\PhoneBookEntitiesLib.dll
+D:\Библиотека\skillbox\Обучение\1. C#\21. ASP.NET Core. Часть 2\homework-theme-21\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.pdb
+D:\Библиотека\skillbox\Обучение\1. C#\21. ASP.NET Core. Часть 2\homework-theme-21\PhoneBookLib\obj\Debug\net6.0\ref\PhoneBookEntitiesLib.dll
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework-theme-22\PhoneBookLib\bin\Debug\net6.0\PhoneBookEntitiesLib.deps.json
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework-theme-22\PhoneBookLib\bin\Debug\net6.0\PhoneBookEntitiesLib.dll
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework-theme-22\PhoneBookLib\bin\Debug\net6.0\PhoneBookEntitiesLib.pdb
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework-theme-22\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.csproj.AssemblyReference.cache
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework-theme-22\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework-theme-22\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.AssemblyInfoInputs.cache
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework-theme-22\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.AssemblyInfo.cs
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework-theme-22\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.csproj.CoreCompileInputs.cache
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework-theme-22\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.dll
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework-theme-22\PhoneBookLib\obj\Debug\net6.0\refint\PhoneBookEntitiesLib.dll
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework-theme-22\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.pdb
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework-theme-22\PhoneBookLib\obj\Debug\net6.0\ref\PhoneBookEntitiesLib.dll
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookLib\bin\Debug\net6.0\PhoneBookEntitiesLib.deps.json
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookLib\bin\Debug\net6.0\PhoneBookEntitiesLib.dll
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookLib\bin\Debug\net6.0\PhoneBookEntitiesLib.pdb
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.csproj.AssemblyReference.cache
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.AssemblyInfoInputs.cache
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.AssemblyInfo.cs
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.csproj.CoreCompileInputs.cache
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.dll
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookLib\obj\Debug\net6.0\refint\PhoneBookEntitiesLib.dll
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookLib\obj\Debug\net6.0\PhoneBookEntitiesLib.pdb
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookLib\obj\Debug\net6.0\ref\PhoneBookEntitiesLib.dll

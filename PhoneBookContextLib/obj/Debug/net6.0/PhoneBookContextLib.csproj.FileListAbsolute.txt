@@ -1,0 +1,15 @@
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookContextLib\bin\Debug\net6.0\PhoneBookContextLib.deps.json
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookContextLib\bin\Debug\net6.0\PhoneBookContextLib.dll
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookContextLib\bin\Debug\net6.0\PhoneBookContextLib.pdb
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookContextLib\bin\Debug\net6.0\PhoneBookEntitiesLib.dll
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookContextLib\bin\Debug\net6.0\PhoneBookEntitiesLib.pdb
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookContextLib\obj\Debug\net6.0\PhoneBookContextLib.csproj.AssemblyReference.cache
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookContextLib\obj\Debug\net6.0\PhoneBookContextLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookContextLib\obj\Debug\net6.0\PhoneBookContextLib.AssemblyInfoInputs.cache
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookContextLib\obj\Debug\net6.0\PhoneBookContextLib.AssemblyInfo.cs
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookContextLib\obj\Debug\net6.0\PhoneBookContextLib.csproj.CoreCompileInputs.cache
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookContextLib\obj\Debug\net6.0\PhoneBookContextLib.csproj.CopyComplete
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookContextLib\obj\Debug\net6.0\PhoneBookContextLib.dll
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookContextLib\obj\Debug\net6.0\refint\PhoneBookContextLib.dll
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookContextLib\obj\Debug\net6.0\PhoneBookContextLib.pdb
+D:\Библиотека\skillbox\Обучение\1. C#\22. Веб-API ASP.NET Core\homework\PhoneBookContextLib\obj\Debug\net6.0\ref\PhoneBookContextLib.dll

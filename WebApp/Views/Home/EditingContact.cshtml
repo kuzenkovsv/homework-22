@@ -1,0 +1,76 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model WebApp.Models.EditingContactViewModel
+
+@{
+    ViewData["Title"] = "Редактирование контакта";
+}
+
+<h2>Данные контакта @Model.Item.ContactID</h2>
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div>
+        <form action="~/Home/EditingCont" method="post">
+
+            <input type="hidden" name="PhoneBookID" value="@Model.Item.PhoneBookID" readonly />
+            <input type="hidden" name="ContactID" value="@Model.Item.ContactID" readonly />
+
+            <table class="EvenString" border="1" cellspacing="0" cellpadding="5" width="30%">
+
+                <tr>
+                    <th>Фамилия</th>
+                    <td>
+                        <input type="text" name="Surname" value="@Model.Item.Surname" required />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Имя</th>
+                    <td>
+                        <input type="text" name="Name" value="@Model.Item.Name" required />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Отчество</th>
+                    <td>
+                        <input type="text" name="MiddleName" value="@Model.Item.MiddleName" required />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Телефон</th>
+                    <td>
+                        <input type="number" name="PhoneNumber" value="@Model.Item.PhoneNumber" required />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Адрес</th>
+                    <td>
+                        <input type="text" name="Address" value="@Model.Item.Address" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Описание</th>
+                    <td>
+                        <input type="text" name="Description" value="@Model.Item.Description" />
+                    </td>
+                </tr>
+
+            </table>
+
+            <p><input class="button" type="submit" value="Сохранить изменения" /></p>
+            <a href="/Home/ContactDetail/@Model.Item.ContactID">
+                <input class="button" type="button" value="Назад" />
+            </a>
+
+        </form>
+
+    </div>
+}
+else
+{
+    <div class="container">
+        <h2 align="center" style="color: red;">Для продолжения необходимо войти в свой аккаунт</h2>
+    </div>
+
+}

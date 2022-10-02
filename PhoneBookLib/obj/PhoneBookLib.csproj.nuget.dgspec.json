@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Библиотека\\skillbox\\Обучение\\1. C#\\21. ASP.NET Core. Часть 2\\homework-theme-21\\PhoneBookLib\\PhoneBookLib.csproj": {}
+  },
+  "projects": {
+    "D:\\Библиотека\\skillbox\\Обучение\\1. C#\\21. ASP.NET Core. Часть 2\\homework-theme-21\\PhoneBookLib\\PhoneBookLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Библиотека\\skillbox\\Обучение\\1. C#\\21. ASP.NET Core. Часть 2\\homework-theme-21\\PhoneBookLib\\PhoneBookLib.csproj",
+        "projectName": "PhoneBookLib",
+        "projectPath": "D:\\Библиотека\\skillbox\\Обучение\\1. C#\\21. ASP.NET Core. Часть 2\\homework-theme-21\\PhoneBookLib\\PhoneBookLib.csproj",
+        "packagesPath": "C:\\Users\\Сергей\\.nuget\\packages\\",
+        "outputPath": "D:\\Библиотека\\skillbox\\Обучение\\1. C#\\21. ASP.NET Core. Часть 2\\homework-theme-21\\PhoneBookLib\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Сергей\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

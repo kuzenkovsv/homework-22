@@ -1,0 +1,81 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: turquoise;
+}
+
+
+.HeaderText {
+    color: white;
+}
+
+.OddString {
+    background-color: GreenYellow;
+}
+
+.EvenString {
+    background-color: LawnGreen;
+}
+
+.button {
+    border-radius: 5px;
+    background-color: mediumorchid;
+    cursor: pointer;
+    border-color: white transparent;
+}
+
+table {
+    border-color: black;
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+tr {
+    height: 50px;
+    text-align: center;
+    align-content: center;
+    border-color: black;
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+th {
+    border-color: black;
+    border-collapse: collapse;
+    border: 1px solid;
+    width: 15%;
+    text-align: center;
+}
+
+.thId {
+    width: 10%;
+}
+
+td {
+    width: 15%;
+    border-color: black;
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+.tdId {
+    width: 10%;
+}
+
+.thColspan {
+    width: 30%;
+}

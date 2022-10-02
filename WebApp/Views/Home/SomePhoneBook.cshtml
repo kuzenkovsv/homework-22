@@ -1,0 +1,93 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model WebApp.Models.PhoneBooksViewModel
+@{
+    ViewData["Title"] = "Информация телефонной книжки";
+}
+<h2>Владелец телефонной книжки: @Model.Item.OwnerPhoneBook</h2>
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <table border="1" cellspacing="0" cellpadding="5" width="85%">
+        <tr bgcolor="Black" class="HeaderText">
+            <th class="thId">Id контакта</th>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Отчество</th>
+            <th class="thColspan" colspan="2">Действие</th>
+        </tr>
+
+        @foreach (var item in ViewBag.Contacts)
+        {
+            @if (Model.Item.PhoneBookID == item.PhoneBookID)
+            {
+                <tr class="EvenString">
+                    <td align="center">
+                        @item.ContactID
+                    </td>
+                    <td>@item.Surname</td>
+                    <td>@item.Name</td>
+                    <td>@item.MiddleName</td>
+                    <td align="center">
+                        <a asp-controller="Home"
+               asp-action="ContactDetail"
+               asp-route-id="@item.ContactID">
+                            <input class="button" type="button" value="Посмотреть" />
+                        </a>
+                    </td>
+                    <td align="center">
+                        <form action="~/Home/DeleteContact" method="post">
+                            <input type="hidden" name="ContactID" value="@item.ContactID" readonly />
+                            <input class="button" type="submit" value="Удалить" />
+                        </form>
+                    </td>
+
+                </tr>
+            }
+
+        }
+
+    </table>
+
+    <br />
+    <a asp-controller="Home" asp-action="AddContact" asp-route-id="@Model.Item.PhoneBookID">
+        <input class="button" type="button" value="Добавить контакт" />
+    </a>
+}
+else
+{
+    <table border="1" cellspacing="0" cellpadding="5" width="85%">
+        <tr bgcolor="Black" class="HeaderText">
+            <th class="thId">Id контакта</th>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Отчество</th>
+            <th class="thColspan">Действие</th>
+        </tr>
+
+        @foreach (var item in ViewBag.Contacts)
+        {
+            @if (Model.Item.PhoneBookID == item.PhoneBookID)
+            {
+                <tr class="EvenString">
+                    <td align="center">
+                        @item.ContactID
+                    </td>
+                    <td>@item.Surname</td>
+                    <td>@item.Name</td>
+                    <td>@item.MiddleName</td>
+                    <td align="center">
+                        <a asp-controller="Home"
+               asp-action="ContactDetail"
+               asp-route-id="@item.ContactID">
+                            <input class="button" type="button" value="Посмотреть" />
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        }
+
+    </table>
+}
