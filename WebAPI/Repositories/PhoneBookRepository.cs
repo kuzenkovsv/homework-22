@@ -21,18 +21,18 @@ namespace WebAPI.Repositories
             }
         }
 
-        public async Task<PhoneBook?> CreateAsync(PhoneBook pbook)
+        public async Task<PhoneBook?> CreateAsync(PhoneBook pb)
         {
             // добавление в базу данных
-            EntityEntry<PhoneBook> added = await pbdb.PhoneBooks.AddAsync(pbook);
+            EntityEntry<PhoneBook> addedpb = await pbdb.PhoneBooks.AddAsync(pb);
 
             int affected = await pbdb.SaveChangesAsync();
             if (affected == 1)
             {
-                if (phoneBooksCache is null) return pbook;
+                if (phoneBooksCache is null) return pb;
 
                 // если телефонная книга новая, то добавление в кэш, иначе вызов метода UpdateCache
-                return phoneBooksCache.AddOrUpdate(pbook.PhoneBookID, pbook, UpdateCache);
+                return phoneBooksCache.AddOrUpdate(pb.PhoneBookID, pb, UpdateCache);
             }
             else
             {

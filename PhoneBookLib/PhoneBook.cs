@@ -12,6 +12,5 @@ namespace PhoneBookEntitiesLib
 
         public string OwnerPhoneBook { get; set; }
 
-        public List<Contact> Contacts { get; set; }
     }
 }

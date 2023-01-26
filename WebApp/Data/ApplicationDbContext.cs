@@ -9,5 +9,6 @@ namespace WebApp.Data
             : base(options)
         {
         }
+        public ApplicationDbContext() { }
     }
 }

@@ -30,13 +30,7 @@ namespace WpfApp
 
             Phbooks.ItemsSource = context.GetPhoneBooks();
 
-            btnAddPb.Click += delegate
-            {
-                context.AddPhoneBook(new PhoneBook()
-                {
-                    OwnerPhoneBook = Owner.Text
-                });
-            };
+            
         }
     }
 }

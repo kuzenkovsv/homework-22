@@ -76,7 +76,7 @@ namespace WebAPI.Controllers
         // PUT: api/contacts/[id]
         // BODY: Contact (JSON, XML)
         [HttpPut("{id}")]
-        [Authorize(Roles = "Administrators")]
+        //[Authorize(Roles = "Administrators")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
@@ -98,7 +98,7 @@ namespace WebAPI.Controllers
 
         // DELETE: api/contacts/[id]
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Administrators")]
+        //[Authorize(Roles = "Administrators")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]

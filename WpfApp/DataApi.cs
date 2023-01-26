@@ -2,16 +2,46 @@
 using PhoneBookEntitiesLib;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace WpfApp
 {
-    internal class DataApi
+    internal class DataApi : BindableBase
     {
         private HttpClient httpClient { get; set; }
+
+        private ObservableCollection<PhoneBook> phoneBooks = new ObservableCollection<PhoneBook>();
+        public ObservableCollection<PhoneBook> PhoneBooks 
+        {
+            get
+            {
+                return phoneBooks;
+            }
+            set
+            {
+                phoneBooks = value;
+                OnPropertyChanged(nameof(phoneBooks));
+            }
+        }
+
+        private ObservableCollection<Contact> contacts = new ObservableCollection<Contact>();
+        public ObservableCollection<Contact> Contacts
+        {
+            get
+            {
+                return contacts;
+            }
+            set
+            {
+                contacts = value;
+                OnPropertyChanged(nameof(contacts));
+            }
+        }
 
         public DataApi()
         {
@@ -23,7 +53,7 @@ namespace WpfApp
             string url = @"https://localhost:5001/api/PhoneBooks";
 
             string json = httpClient.GetStringAsync(url).Result;
-            return JsonConvert.DeserializeObject<IEnumerable<PhoneBook>>(json);
+            return PhoneBooks=new ObservableCollection<PhoneBook>(JsonConvert.DeserializeObject<IEnumerable<PhoneBook>>(json));
 
         }
 
@@ -44,7 +74,16 @@ namespace WpfApp
             string url = @"https://localhost:5001/api/Contacts";
 
             string json = httpClient.GetStringAsync(url).Result;
-            return JsonConvert.DeserializeObject<IEnumerable<Contact>>(json);
+            return Contacts = new ObservableCollection<Contact>(JsonConvert.DeserializeObject<IEnumerable<Contact>>(json));
+
+        }
+
+        public IEnumerable<Contact> GetContact(int id)
+        {
+            string url = $@"https://localhost:5001/api/Contacts/{id}";
+
+            string json = httpClient.GetStringAsync(url).Result;
+            return Contacts = new ObservableCollection<Contact>(JsonConvert.DeserializeObject<IEnumerable<Contact>>(json));
 
         }
 
@@ -53,7 +92,7 @@ namespace WpfApp
             string url = $@"https://localhost:5001/api/Contacts?phoneBookID={idPb}";
 
             string json = httpClient.GetStringAsync(url).Result;
-            return JsonConvert.DeserializeObject<IEnumerable<Contact>>(json);
+            return Contacts = new ObservableCollection<Contact>(JsonConvert.DeserializeObject<IEnumerable<Contact>>(json));
 
         }
 
@@ -68,6 +107,32 @@ namespace WpfApp
                 content: new StringContent(JsonConvert.SerializeObject(contact), Encoding.UTF8,
                 mediaType: "application/json")
                 ).Result;
+        }
+
+
+        public void UpdateContact(int id, Contact contact)
+        {
+            string url = $@"https://localhost:5001/api/Contacts/{id}";
+
+            var r = httpClient.PutAsync(
+                requestUri: url,
+                content: new StringContent(JsonConvert.SerializeObject(contact), Encoding.UTF8,
+                mediaType: "application/json")
+                ).Result;
+        }
+        
+
+
+
+
+
+        public void DelContact(int id, int pbId)
+        {
+            string url = $@"https://localhost:5001/api/Contacts/{id}";
+
+            httpClient.DeleteAsync(requestUri: url);
+
+            GetContactsByIdPb(pbId);
 
         }
     }

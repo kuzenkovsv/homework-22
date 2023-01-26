@@ -5,8 +5,86 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp.Views"
         mc:Ignorable="d"
-        Title="OpenContact" Height="450" Width="800">
+        Title="ContactDetail" Height="720" Width="450" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Name="ContDet">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="200"/>
+
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" Name="toolbar" Background="Gray">
+
+            <TextBlock Grid.Row="1" Grid.Column="1" Width="70" Height="22" Name="DetailContactID" Text="{Binding ContactID}" Visibility="Collapsed"/>
+
+            <Button Margin="275,6,6,6"
+                Width="70" 
+                Height="20" 
+                Name="login" 
+                HorizontalAlignment="Right" 
+                VerticalAlignment="Center">
+                Login
+            </Button>
+
+            <Button Margin="6,6,6,6"
+                Width="70" 
+                Height="20" 
+                Name="registration" 
+                HorizontalAlignment="Right" 
+                VerticalAlignment="Center">
+                Registration
+            </Button>
+
+        </StackPanel>
         
+        
+        <TextBlock Grid.Row="1" Grid.Column="0" Width="70" Height="22" Text="Фамилия"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Width="70" Height="22" Name="ContSurname" Text="{Binding Surname}"/>
+        
+        <TextBlock Grid.Row="2" Grid.Column="0" Width="70" Height="22" Text="Имя"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Width="70" Height="22" Name="ContName" Text="{Binding Name}"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Width="70" Height="22" Text="Отчество"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" Width="70" Height="22" Name="ContMiddleName" Text="{Binding MiddleName}"/>
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Width="70" Height="22" Text="Телефон"/>
+        <TextBlock Grid.Row="4" Grid.Column="1" Width="70" Height="22" Name="ContPhoneNumber" Text="{Binding PhoneNumber}"/>
+
+        <TextBlock Grid.Row="5" Grid.Column="0" Width="70" Height="22" Text="Адрес"/>
+        <TextBlock Grid.Row="5" Grid.Column="1" Width="70" Height="22" Name="ContAddress" Text="{Binding Address}"/>
+
+        <TextBlock Grid.Row="6" Grid.Column="0" Width="70" Height="22" Text="Описание"/>
+        <TextBlock Grid.Row="6" Grid.Column="1" Width="70" Height="22" Name="ContDescription" Text="{Binding Description}"/>
+
+        <Button Grid.Row="7" Grid.Column="0" Height="20" Width="100" Content="Редактировать" 
+                Command="{Binding EditContCommand}" CommandParameter="{Binding ElementName=ContDet}"/>
+
+        <Button Grid.Row="7" Grid.Column="1" Height="20" Width="70" Content="Обновить" 
+                Command="{Binding Refresh}" CommandParameter="{Binding ElementName=ContDet}"/>
+
+        <DataGrid x:Name="CoD" Grid.Row="8" Grid.ColumnSpan="2" AutoGenerateColumns="False" 
+                  IsSynchronizedWithCurrentItem="True" SelectionMode="Single" CanUserResizeColumns="False"
+                  >
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="40" Binding="{Binding ContactID}" Header="Id"/>
+                <DataGridTextColumn Width="150" Binding="{Binding Surname}" Header="фамилия"/>
+                <DataGridTextColumn Width="150" Binding="{Binding Name}" Header="Имя"/>
+                <DataGridTextColumn Width="150" Binding="{Binding MiddleName}" Header="Отчество"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
     </Grid>
 </Window>

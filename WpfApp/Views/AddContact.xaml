@@ -5,8 +5,68 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp.Views"
         mc:Ignorable="d"
-        Title="AddContact" Height="450" Width="800">
+        Title="AddContact" Height="380" Width="450" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Name="AddCont">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" Name="toolbar" Background="Gray">
+
+            <TextBlock Grid.Row="1" Grid.Column="1" Width="70" Height="22" Name="AddContPhoneBookID" Text="{Binding PhoneBookID}" Visibility="Collapsed"/>
+
+            <Button Margin="275,6,6,6"
+                Width="70" 
+                Height="20" 
+                Name="login" 
+                HorizontalAlignment="Right" 
+                VerticalAlignment="Center">
+                Login
+            </Button>
+
+            <Button Margin="6,6,6,6"
+                Width="70" 
+                Height="20" 
+                Name="registration" 
+                HorizontalAlignment="Right" 
+                VerticalAlignment="Center">
+                Registration
+            </Button>
+
+        </StackPanel>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Width="70" Height="22" Text="Фамилия"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Width="140" Height="22" Name="AddSurname" BorderBrush="Black"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Width="70" Height="22" Text="Имя"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Width="140" Height="22" Name="AddName" BorderBrush="Black"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Width="70" Height="22" Text="Отчество"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Width="140" Height="22" Name="AddMiddleName" BorderBrush="Black"/>
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Width="70" Height="22" Text="Телефон"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Width="140" Height="22" Name="AddPhoneNumber" BorderBrush="Black"/>
+
+        <TextBlock Grid.Row="5" Grid.Column="0" Width="70" Height="22" Text="Адрес"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Width="200" Height="22" Name="AddAddress" BorderBrush="Black"/>
+
+        <TextBlock Grid.Row="6" Grid.Column="0" Width="70" Height="22" Text="Описание"/>
+        <TextBox Grid.Row="6" Grid.Column="1" Width="200" Height="22" Name="AddDescription" BorderBrush="Black"/>
+
+        <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Height="20" Width="100" Content="Сохранить" 
+                Command="{Binding AddContactCommand}" CommandParameter="{Binding ElementName=AddCont}"/>
+
+
     </Grid>
 </Window>

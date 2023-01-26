@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp" xmlns:wpf="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
         mc:Ignorable="d"
-        Title="Реестр телефонных книжек" Height="600" Width="450" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Name="PhoneBooks">
+        Title="Реестр телефонных книжек" Height="600" Width="450" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Name="PBs">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -19,25 +19,50 @@
             <RowDefinition Height="8*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" Name="toolbar">
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" Name="toolbar" Background="Gray">
 
-            <Button Margin="275,6,6,6"
-                Width="70" 
-                Height="20" 
-                Name="login" 
-                HorizontalAlignment="Right" 
-                VerticalAlignment="Center">
-                Login
-            </Button>
+            <TextBox x:Name="LoginTB" Width="120" Height="20" Margin="5,5,5,5">
+                <TextBox.Style>
+                    <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                        <Style.Resources>
+                            <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                                <VisualBrush.Visual>
+                                    <Label Content="Логин"/>
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Style.Resources>
+                        <Style.Triggers>
+                            <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                            </Trigger>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter Property="Background" Value="White" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+            <PasswordBox x:Name="LoginPassB" Width="120" Height="20" Margin="5,5,5,5">
 
-            <Button Margin="6,6,6,6"
+                </PasswordBox>
+
+
+            <Button Margin="5,5,5,5" Width="70" Height="20" Name="login" Content="Login" 
+                    Command="{Binding Login}" CommandParameter="{Binding ElementName=PBs}"/>
+            
+
+
+            <!--<Button Margin="6,6,6,6"
                 Width="70" 
                 Height="20" 
                 Name="registration" 
                 HorizontalAlignment="Right" 
                 VerticalAlignment="Center">
                 Registration
-            </Button>
+            </Button>-->
 
         </StackPanel>
 
@@ -63,9 +88,14 @@
                         Margin="5"/>
             <TextBox Name="Owner" BorderBrush="Black" VerticalAlignment="Center" Width="150" ToolTip="Введите ФИО владельца"
                      Margin="5"/>
+            
             <!--<Button Height="20" Width="70" Content="Добавить" Margin="5" 
                     Command="{Binding AddPb}" CommandParameter="{Binding ElementName=Owner, Path=Text}"/>-->
-            <Button Name="btnAddPb" Height="20" Width="70" Content="Добавить" Margin="5" />
+
+            <Button Height="20" Width="70" Content="Добавить" Margin="5" 
+                    Command="{Binding AddPb}" CommandParameter="{Binding ElementName=PBs}"/>
+
+            <!--<Button Name="btnAddPb" Height="20" Width="70" Content="Добавить" Margin="5" />-->
         </StackPanel>
 
     </Grid>

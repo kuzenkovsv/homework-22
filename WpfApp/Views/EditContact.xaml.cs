@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp.ViewModels;
 
 namespace WpfApp.Views
 {
@@ -19,9 +20,14 @@ namespace WpfApp.Views
     /// </summary>
     public partial class EditContact : Window
     {
-        public EditContact()
+        public int contId { get; set; }
+        public int pbId { get; set; }
+
+        public EditContact(EditContactViewModel editContactViewModel)
         {
             InitializeComponent();
+            DataApi context = new DataApi();
+            DataContext = editContactViewModel;
         }
     }
 }

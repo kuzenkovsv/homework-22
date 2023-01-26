@@ -20,10 +20,15 @@ namespace WpfApp.Views
     /// </summary>
     public partial class SomePhoneBook : Window
     {
+        public int pbID { get; set; }
+
         public SomePhoneBook(SomePhoneBookViewModel somePhoneBookViewModel)
         {
-            DataContext = somePhoneBookViewModel;
             InitializeComponent();
+            DataApi context = new DataApi();
+            DataContext = somePhoneBookViewModel;
+
+            //SomePb.ItemsSource = context.GetContactsByIdPb(pbID);
         }
     }
 }

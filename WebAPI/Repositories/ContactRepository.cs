@@ -90,7 +90,10 @@ namespace WebAPI.Repositories
                     // обновление в кэше
                     return Task.Run(() => UpdateCache(id, c));
                 }
-                return null;
+                //else
+                //{
+                    return null;
+                //}
             });
         }
 

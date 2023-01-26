@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PhoneBookContextLib\PhoneBookContextLib.csproj" />
     <ProjectReference Include="..\PhoneBookLib\PhoneBookEntitiesLib.csproj" />
+    <ProjectReference Include="..\WebApp\WebApp.csproj" />
   </ItemGroup>
 
 </Project>
