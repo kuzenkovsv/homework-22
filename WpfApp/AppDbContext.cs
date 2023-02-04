@@ -13,15 +13,34 @@ namespace WpfApp
         public AppDbContext(DbContextOptions options) : base(options) { }
         public AppDbContext() : base() { }
 
-        public DbSet<IdentityUser> AspNetUsers { get; }
+        public DbSet<IdentityUser> AspNetUsers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(
-                @"Server=(localdb)\\mssqllocaldb;
-Database=aspnet-WebApp-0069E248-C00F-4BFE-9785-01E97A9DCDC3;
-Trusted_Connection=True;
-MultipleActiveResultSets=true");
+            //            optionsBuilder.UseSqlServer(
+            //                @"Server=(localdb)\\mssqllocaldb;
+            //Database=aspnet-WebApp-0069E248-C00F-4BFE-9785-01E97A9DCDC3;
+            //Trusted_Connection=True;
+            //MultipleActiveResultSets=true");
+
+            optionsBuilder.UseSqlServer(@"Data Source = (localdb)\MSSQLLocalDB; 
+Initial Catalog = aspnet - WebApp - 0069E248 - C00F - 4BFE - 9785 - 01E97A9DCDC3; 
+Integrated Security = True; 
+Connect Timeout = 120; 
+Encrypt = False; 
+TrustServerCertificate = False; 
+ApplicationIntent = ReadWrite; 
+MultiSubnetFailover = False", builder =>
+            {
+                builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
+            });
+            base.OnConfiguring(optionsBuilder);
+
+            //            optionsBuilder.UseSqlServer(
+            //                @"Server=(localdb)\MSSQLLocaldb;
+            //Database=aspnet-WebApp-0069E248-C00F-4BFE-9785-01E97A9DCDC3;
+            //Trusted_Connection=True;
+            //MultipleActiveResultSets=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -78,7 +97,7 @@ MultipleActiveResultSets=true");
                         .HasColumnType("nvarchar(256)")
                         .HasMaxLength(256);
 
-            modelBuilder.Entity<IdentityUser>().HasKey("Id");
+            modelBuilder.Entity<IdentityUser>().HasNoKey();
 
             modelBuilder.Entity<IdentityUser>().HasIndex("NormalizedEmail")
                         .HasName("EmailIndex");

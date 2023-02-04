@@ -50,7 +50,11 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.5, )"
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.Extensions.Caching.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.2, )"
             }
           },
           "imports": [

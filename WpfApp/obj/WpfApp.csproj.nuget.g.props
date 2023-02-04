@@ -13,6 +13,9 @@
     <SourceRoot Include="C:\Users\Сергей\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore\7.0.2\buildTransitive\net6.0\Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore\7.0.2\buildTransitive\net6.0\Microsoft.EntityFrameworkCore.props')" />
+  </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\Сергей\.nuget\packages\microsoft.entityframeworkcore.tools\6.0.5</PkgMicrosoft_EntityFrameworkCore_Tools>
     <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\Сергей\.nuget\packages\entityframework\6.1.0</PkgEntityFramework>

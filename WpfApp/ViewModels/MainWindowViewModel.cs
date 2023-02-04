@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace WpfApp.ViewModels
 {
